@@ -1,5 +1,6 @@
 ### gdb basic commands
 `gdb -q PROGRAM --tui` => to use a terminal user interface
+
 `layout asm`        => in the view above will show the assembly on top!
 
 `r` or `run`        => runs the program
