@@ -78,7 +78,7 @@ End with a line saying just "end".
 >end
 ```
 
-Instead of defying a hook-stop, you could direclty use the `display` command if
+Instead of defining a hook-stop, you could direclty use the `display` command if
 you wanted to simply print registers and the contents of the `sample` variable,
 without disassemblying:
 
