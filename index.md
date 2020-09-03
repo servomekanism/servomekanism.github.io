@@ -132,7 +132,7 @@ Syscalls in 32bit Linux can be done in 3 ways:
  2. using the `SYSENTER` instruction
  3. using [vDSO](https://man7.org/linux/man-pages/man7/vdso.7.html)
 
-In 32bit Linux, syscalls are \#defined in:
+In 32bit Linux, syscalls are `#define`d in:
 `/usr/include/i386-linux-gnu/asm/unistd_32.h`
 
 ### writing assembly
@@ -147,7 +147,7 @@ The main steps are the following:
  5. put the syscall number in `eax`
  6. do `int 0x80` to execute the syscall
 
-Defining initialized data (.data segment) in NASM, examples:
+Defining initialized data (`.data` segment) in NASM, examples:
  * `db    0x55`                ; just the byte 0x55 
  * `db    0x55,0x56,0x57`      ; three bytes in succession 
  * `db    'a',0x55`            ; character constants are OK 
@@ -162,7 +162,7 @@ Defining initialized data (.data segment) in NASM, examples:
  * `dq    1.234567e20`         ; double-precision float 
  * `dt    1.234567e20`         ; extended-precision float
 
-Defining uninitialized data (.bss segment), examples:
+Defining uninitialized data (`.bss` segment), examples:
  * buffer:         `resb    64`              ; reserve 64 bytes 
  * wordvar:        `resw    1`               ; reserve a word 
  * realarray       `resq    10`              ; array of ten reals 
